@@ -5,7 +5,7 @@ services:
         container_name: strapi
         depends_on:
             - postgres
-        image: strapi/strapi
+        image: strapi/strapi:latest
         restart: unless-stopped
         environment:
             DATABASE_CLIENT: postgres
@@ -21,7 +21,7 @@ services:
 
     postgres:
         container_name: postgres
-        image: postgres
+        image: postgres:latest
         restart: unless-stopped
         environment:
             POSTGRES_DB: strapi
